@@ -1,4 +1,9 @@
-FROM python:3.9
+FROM python:3.9-alpine
+
+RUN apk add --no-cache zbar
+
+# to compile Pillow
+RUN apk add --no-cache zlib-dev jpeg-dev gcc musl-dev
 
 WORKDIR /code
 
