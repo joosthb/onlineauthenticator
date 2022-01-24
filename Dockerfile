@@ -1,6 +1,8 @@
 FROM python:3.9-alpine
 
-RUN apk add --no-cache zbar
+RUN apk add --no-cache zbar-dev
+
+# TODO  builder image?
 
 # to compile Pillow
 RUN apk add --no-cache zlib-dev jpeg-dev gcc musl-dev
