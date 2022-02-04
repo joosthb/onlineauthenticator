@@ -28,5 +28,5 @@ async def upload(file: UploadFile = File(...)):
     # extract qr data
     contents = await file.read()
     # save_file(file.filename, contents)
-    qrdata += decode(Image.frombytes(contents))
+    qrdata = decode(Image.frombytes(contents))
     return {"qr_data": qrdata}
