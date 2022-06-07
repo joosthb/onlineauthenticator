@@ -13,3 +13,8 @@ install packages
 
 run local 
 `uvicorn main:app --host 0.0.0.0 --port 80`
+
+## Deploy as azure webapp
+Startup command
+
+`gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app`
