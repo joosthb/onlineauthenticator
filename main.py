@@ -32,6 +32,7 @@ async def read_item(request: Request, shared_key: str):
 async def read_item(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+
 # @app.get("/")
 # def read_root():
 #     return {"Hello": "World"}
