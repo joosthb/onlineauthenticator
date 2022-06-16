@@ -13,7 +13,7 @@
         </div>
         <button class="w-100 btn btn-lg btn-primary" id="submit-button">Generate TOTP</button>
         <hr class="my-4">
-        <small class="text-muted">By clicking Generate TOTP, you agree to not using this app for security porposes.</small>
+        <small class="text-muted">By clicking Generate TOTP, you agree to not using this app for security purposes.</small>
     </div>
   </div>
 </div>
@@ -22,7 +22,7 @@
 {% block script_append %}
 <script>
   $('#submit-button').click(function (e) {
-    sharedkey = $('#shared-key').val();
+    var sharedkey = $('#shared-key').val();
     if(sharedkey) {
       location.href = '/totp/' + sharedkey;
     }else{

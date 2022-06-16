@@ -26,7 +26,7 @@ async def read_item(request: Request, shared_key: str):
       totp = mintotp.totp(shared_key)
     except:
       totp = None
-    return templates.TemplateResponse("item.html", {"request": request, "totp": totp, "validity": validity})
+    return templates.TemplateResponse("totp.html", {"request": request, "totp": totp, "validity": validity})
 
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
