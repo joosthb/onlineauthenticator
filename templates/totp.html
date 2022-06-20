@@ -21,25 +21,8 @@
 </div>
 {% endblock %}
 
-
 {% block script_append %}
 <script>
-  // copy to clipboard function
-  // function copy(text) {
-  function copy() {
-      var t = document.getElementById('totp')
-      // t.innerHTML = text
-      t.select()
-      try {
-        var successful = document.execCommand('copy')
-        var msg = successful ? 'successfully' : 'unsuccessfully'
-        console.log('text coppied ' + msg)
-      } catch (err) {
-        console.log('Unable to copy text')
-      }
-      t.innerHTML = ''
-    }
-
   var validity = {{ validity }};
   // Update the count down every 1 second
   var x = setInterval(function() {
@@ -55,7 +38,18 @@
   }, 1000);
 
   $('#totp').click(function (e) {
-    copy();
+    // copy
+    // var t = document.getElementById('totp')
+    var t = $('#totp')
+
+      // t.innerHTML = text
+      t.select();
+      try {
+        document.execCommand('copy');
+        // todo implement copied text 
+      } catch (err) {
+        console.log('Unable to copy text');
+      }
   });
 
   $(function () {
