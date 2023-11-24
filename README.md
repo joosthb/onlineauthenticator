@@ -2,18 +2,20 @@
 Source code repo of onlineauthenticator.com
 
 ## run test develop local
-setup venv
-`python -m venv venv`
+```
+# setup venv
+python -m venv venv
 
-activate venv
-`source venv/bin/activate`
+# activate venv
+source venv/bin/activate
 
-install packages
-`pip install -r requirements.txt`
+# install packages
+pip install -r requirements.txt
 
-run local 
-`uvicorn main:app --host 0.0.0.0 --port 80 --reload`
+# run local 
+uvicorn main:app --host 0.0.0.0 --port 80 --reload
 
+```
 ## Deploy as azure webapp
 Startup command
 
